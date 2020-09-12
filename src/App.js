@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { useQuery } from '@apollo/react-hooks'
 import { getPosts } from './services/get-posts'
+import PostsDisplay from './Components/PostsDisplay'
 
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
 
   return (
     <div className="App">
-      {data.allPosts.length}
+      <PostsDisplay posts={data?.allPosts} />
     </div>
   );
 }

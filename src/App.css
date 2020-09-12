@@ -8,15 +8,8 @@ body {
   text-align: center;
 }
 
-.vx-axis g,
-.vx-axis line {
-  stroke: #999;
-}
-
 .vx-axis text {
   fill: #999;
+  font-size: 10px;
 }
 
-.vx-bar {
-  transition: height 150ms, y 150ms;
-}
