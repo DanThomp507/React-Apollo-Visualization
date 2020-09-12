@@ -1,7 +1,7 @@
 import { gql } from "apollo-boost";
 export const getPosts = gql`
 {
-  allPosts(count: 100) {
+  allPosts(count: 1) {
       id
       title
       body
