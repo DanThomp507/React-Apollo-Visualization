@@ -1,8 +1,9 @@
-import React from "react";
-import { Group } from "@vx/group";
-import { scaleBand, scaleLinear } from "@vx/scale";
-import { AxisLeft, AxisBottom } from "@vx/axis";
-import Bar from "./Bar";
+import React from 'react';
+import { Group } from '@vx/group';
+import { scaleBand, scaleLinear } from '@vx/scale';
+import { AxisLeft, AxisBottom } from '@vx/axis';
+import Bar from './Bar';
+import PropTypes from 'prop-types';
 
 // accessors
 const x = d => d.label;
@@ -41,17 +42,17 @@ const VX = ({ data }) => {
         const barHeight = yMax - yPoint(d);
         return (
           <Group left={50} key={`bar-${i}`}>
-            <AxisLeft left={10} scale={yScale} numTicks={5} label="Likelihood" />
+            <AxisLeft left={10} scale={yScale} numTicks={5} label='Likelihood' />
             <Bar
               x={xPoint(d)}
               y={yMax - barHeight}
               height={barHeight}
               width={xScale.bandwidth()}
-              fill="rgba(50, 148, 148, 0.8)"
+              fill='rgba(50, 148, 148, 0.8)'
             />
             <AxisBottom
               scale={xScale}
-              label="Topics"
+              label='Topics'
               labelOffset={15}
               top={yMax}
               bottom={10}
@@ -60,7 +61,13 @@ const VX = ({ data }) => {
         );
       })
       }
-    </svg >
+    </svg>
   );
 }
-export default VX
+
+VX.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+};
+
+export default VX;
+

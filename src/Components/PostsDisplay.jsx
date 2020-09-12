@@ -1,6 +1,7 @@
 import React from 'react';
-import VX from './VX'
-import styled from 'styled-components'
+import VX from './VX';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
   display: flex;
@@ -43,4 +44,8 @@ const PostsDisplay = ({ posts }) => {
   );
 }
 
-export default PostsDisplay
+PostsDisplay.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+};
+
+export default PostsDisplay;
