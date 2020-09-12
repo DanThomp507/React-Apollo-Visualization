@@ -1,68 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React-Apollo Data Visualisation
 
-## Available Scripts
+Develop a React-based web application that uses our mock GraphQL API and visualises relationships between posts and topics (and users, if you like). The visualisations must be constructed using D3 or VX (which we recommend). We use Apollo for GraphQL API communication, but you can use whatever solution you prefer.
 
-In the project directory, you can run:
+## Installation Instructions
 
-### `yarn start`
+* git clone <https://github.com/DanThomp507/React-Apollo-Visualization>
+* cd into project directory
+* run `yarn to install dependencies`
+* run `yarn start` to spin up application
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
+- React
+- Apollo (GraphQL client) - also using Apollo React-Hooks to ensure app is purely functional
+- VX (for data visualisation)
+- Styled Components (for some minor CSS updates)
+- PropTypes
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Design
 
-### `yarn test`
+- I wanted to make the user interface as easy to use as possible given my time constraints. I wanted the data to be presented clearly so that there was no confusion, and that the user could identify the relationship between the post and its potential topics.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- In terms of coding decisions, I prefer using function components with React Hooks as opposed to Class components and having to deal with state management. I think given the scope of this application, function components make the most sense, as state management gets messy and I didn't want to get too distracted by those potential difficulties. I believe that my implementation was clean and efficient.
 
-### `yarn build`
+## Process
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+My first thought was to identify the data I had to work with and see what the best way to go about visualising was, as there are many possibilities!
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+I immediately created my react app and installed my GraphQL / Apollo related dependencies. I have experience working with React and Apollo so I knew how to get my client spun up and was able to see the data I was working with pretty quickly!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I don't have an extensive amount of exposure to VX, to be honest. I found learning how to work with it definitely took up a good chunk of my time, which was not an issue at all! I knew that I wanted to display the relationship between a post and its potential likely topics. I decided that I would visualise this using a bar graph that was filterable by post (if a user selects a new post, the new topic data immediately renders).
 
-### `yarn eject`
+Overall, the process was pretty straightforward. I knew what I wanted to do and it was just a matter of working with the nuances of VX!
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Challenges
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Working with VX for the first time when I had time constraints was definitely a fun one! However, the documentation is pretty good and I was able to pick it up relatively quickly (quick enough to implement a solution I found satisfactory).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Determining the best way to visualise the post / topic data. It's quite complex and nuanced and there are many different approaches one can take. My solution is far from perfect and if given more time I'd definitely have a re-think. Overall, though, pretty pleased with how it came out!
