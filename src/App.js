@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { useQuery } from '@apollo/react-hooks'
+import { getPosts } from './services/get-posts'
 
-function App() {
+
+const App = () => {
+  const { loading, error, data } = useQuery(getPosts)
+
+  if (error) return <h1>Something went wrong!</h1>
+  if (loading) return <h1>Loading...</h1>
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {data.allPosts.length}
     </div>
   );
 }
