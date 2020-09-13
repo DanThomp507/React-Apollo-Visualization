@@ -6,7 +6,7 @@ Develop a React-based web application that uses our mock GraphQL API and visuali
 
 * git clone <https://github.com/DanThomp507/React-Apollo-Visualization>
 * cd into project directory
-* run `yarn to install dependencies`
+* run `yarn` to install dependencies
 * run `yarn start` to spin up application
 
 ## Technologies Used
